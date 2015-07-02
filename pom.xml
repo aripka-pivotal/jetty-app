@@ -59,7 +59,7 @@
 				<configuration>
 					<descriptors>
 						<descriptor>
-							src/assembly/jar-with-deps.xml
+							src/assembly/dist-zip.xml
 						</descriptor>
 					</descriptors>
 				</configuration>
