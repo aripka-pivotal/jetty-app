@@ -18,7 +18,16 @@ public class HelloWorld extends AbstractHandler {
 		response.setStatus(HttpServletResponse.SC_OK);
 		baseRequest.setHandled(true);
 		response.getWriter().println("<h1>Hello World</h1>");
-
+		
+		//some code that tests if we can find a mariadb class - this is really bad code
+		boolean foundMaria = false;
+		
+		try{
+			foundMaria = Class.forName("org.mariadb.jdbc.Driver") !=null; 
+		}catch(ClassNotFoundException cfn){
+			//eat exception
+		}
+		response.getWriter().println("<b>Found MariaDriver:"+foundMaria+"</b>");
 	}
 
 }
