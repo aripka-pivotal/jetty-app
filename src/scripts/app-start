@@ -65,7 +65,6 @@ cd "`dirname \"$PRG\"`/.." >&-
 APP_HOME="`pwd -P`"
 cd "$SAVED" >&-
 
-#CLASSPATH=$APP_HOME/lib/jetty-app-0.0.1-SNAPSHOT.jar
 CLASSPATH=""
 MAIN_JAR=$APP_HOME/jetty-app-0.0.1-SNAPSHOT.jar
 
