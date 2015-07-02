@@ -67,7 +67,7 @@ cd "$SAVED" >&-
 
 #CLASSPATH=$APP_HOME/lib/jetty-app-0.0.1-SNAPSHOT.jar
 CLASSPATH=""
-MAIN_JAR=$APP_HOME/lib/jetty-app-0.0.1-SNAPSHOT.jar
+MAIN_JAR=$APP_HOME/jetty-app-0.0.1-SNAPSHOT.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then

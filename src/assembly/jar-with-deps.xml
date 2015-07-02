@@ -5,21 +5,28 @@
 	<!-- TODO: a jarjar format would be better -->
 	<id>jar-with-dependencies</id>
 	<formats>
-		<format>jar</format>
+		<format>zip</format>
 	</formats>
 	<baseDirectory></baseDirectory>
 	<fileSets>
 		<fileSet>
-			<directory>target/classes</directory>
-			<outputDirectory></outputDirectory>
+			<directory>src/scripts</directory>
+			<outputDirectory>${project.artifactId}-${project.version}/bin</outputDirectory>
 			<includes>
 				<include>**</include>
 			</includes>
 		</fileSet>
 	</fileSets>
+	<files>
+		<file>
+		<source>target/${project.artifactId}-${project.version}.jar</source>
+		<outputDirectory>${project.artifactId}-${project.version}/</outputDirectory>
+		</file>
+	</files>
 	<dependencySets>
 		<dependencySet>
 			<useProjectArtifact>false</useProjectArtifact>
+			<outputDirectory>${project.artifactId}-${project.version}/lib</outputDirectory>
 
 			<unpack>false</unpack>
 			<scope>runtime</scope>

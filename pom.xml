@@ -28,7 +28,7 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<version>2.10</version>
@@ -44,8 +44,8 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
-			<!-- <plugin>
+			</plugin>-->
+			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.5.5</version>
 				<executions>
@@ -57,19 +57,13 @@
 					</execution>
 				</executions>
 				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<mainClass>io.pivotal.example.HelloJetty</mainClass>
-						</manifest>
-					</archive>
 					<descriptors>
 						<descriptor>
 							src/assembly/jar-with-deps.xml
 						</descriptor>
 					</descriptors>
 				</configuration>
-			</plugin>-->
+			</plugin>
 		</plugins>
 	</build>
 
