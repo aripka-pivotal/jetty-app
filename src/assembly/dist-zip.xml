@@ -17,17 +17,10 @@
 			</includes>
 		</fileSet>
 	</fileSets>
-	<files>
-		<file>
-		<source>target/${project.artifactId}-${project.version}.jar</source>
-		<outputDirectory>${project.artifactId}-${project.version}/</outputDirectory>
-		</file>
-	</files>
 	<dependencySets>
 		<dependencySet>
-			<useProjectArtifact>false</useProjectArtifact>
+			<useProjectArtifact>true</useProjectArtifact>
 			<outputDirectory>${project.artifactId}-${project.version}/lib</outputDirectory>
-
 			<unpack>false</unpack>
 			<scope>runtime</scope>
 		</dependencySet>

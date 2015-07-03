@@ -65,8 +65,19 @@ cd "`dirname \"$PRG\"`/.." >&-
 APP_HOME="`pwd -P`"
 cd "$SAVED" >&-
 
-CLASSPATH=""
 MAIN_JAR=$APP_HOME/jetty-app-0.0.1-SNAPSHOT.jar
+
+#create variable classpath for added libs for HttpSession Management
+# add all jars in moduleLib for http session management
+for j in $APP_HOME/lib/*.jar; do
+  if [ -f "$j" ]; then
+    LIB_JARS="$LIB_JARS:$j"
+  fi
+done
+
+CLASSPATH=$LIB_JARS
+
+MAIN_CLASS=io.pivotal.example.HelloJetty
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -162,5 +173,5 @@ function splitJvmOpts() {
 eval splitJvmOpts $DEFAULT_JVM_OPTS $JAVA_OPTS $JETTY_GRADLE_OPTS
 
 
-exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" -jar "$MAIN_JAR"
-#exec "$JAVACMD" "${JVM_OPTS[@]}" -jar "$MAIN_JAR"
+exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" "$MAIN_CLASS"
+#exec "$JAVACMD" "${JVM_OPTS[@]}" -jar "$MAIN_JAR
