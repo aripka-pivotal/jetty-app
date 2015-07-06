@@ -65,8 +65,6 @@ cd "`dirname \"$PRG\"`/.." >&-
 APP_HOME="`pwd -P`"
 cd "$SAVED" >&-
 
-MAIN_JAR=$APP_HOME/jetty-app-0.0.1-SNAPSHOT.jar
-
 #create variable classpath for added libs for HttpSession Management
 # add all jars in moduleLib for http session management
 for j in $APP_HOME/lib/*.jar; do
@@ -172,6 +170,4 @@ function splitJvmOpts() {
 }
 eval splitJvmOpts $DEFAULT_JVM_OPTS $JAVA_OPTS $JETTY_GRADLE_OPTS
 
-
 exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" "$MAIN_CLASS"
-#exec "$JAVACMD" "${JVM_OPTS[@]}" -jar "$MAIN_JAR
