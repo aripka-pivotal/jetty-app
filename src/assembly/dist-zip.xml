@@ -10,10 +10,10 @@
 	<baseDirectory></baseDirectory>
 	<fileSets>
 		<fileSet>
-			<directory>src/scripts</directory>
+			<directory>target/start-scripts</directory>
 			<outputDirectory>${project.artifactId}-${project.version}/bin</outputDirectory>
 			<includes>
-				<include>**</include>
+				<include>app-start</include>
 			</includes>
 		</fileSet>
 	</fileSets>

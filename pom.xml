@@ -33,6 +33,21 @@
 					</descriptors>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.rippcodes.maven</groupId>
+				<artifactId>distZip-maven-plugin</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate-start-script</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClassName>io.pivotal.example.HelloJetty</mainClassName>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
