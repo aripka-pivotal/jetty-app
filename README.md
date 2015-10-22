@@ -6,8 +6,8 @@ The pom file includes the (unpublished) distZip plugin (source code found here -
 **Build Instructions**
 `>mvn clean package`
 This will build the application and then create a Gradle distZip packaging that is compatible with the Cloud Foundry Buildpack.
-  See Java build pack documentation - https://github.com/cloudfoundry/java-buildpack/blob/master/docs/container-dist_zip.md
-  See gradle application plugin for details about distZip  https://docs.gradle.org/current/userguide/application_plugin.html
+  - See Java build pack documentation - https://github.com/cloudfoundry/java-buildpack/blob/master/docs/container-dist_zip.md
+  - See gradle application plugin for details about distZip  https://docs.gradle.org/current/userguide/application_plugin.html
 
 **Deploy to Cloud Foundry**
 This application currently contains a manifest you only need to supply a name (optional host if different than name)
