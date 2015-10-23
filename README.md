@@ -11,5 +11,6 @@ This will build the application and then create a Gradle distZip packaging that 
 
 **Deploy to Cloud Foundry**
 This application currently contains a manifest you only need to supply a name (optional host if different than name)
-cf push <<app_name>>
+
+`>cf push \<\<app_name\>\>`
 
