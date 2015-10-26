@@ -1,0 +1,5 @@
+---
+applications:
+- memory: 256M 
+  instances: 1
+  path: ./target/jetty-app-0.0.1-SNAPSHOT-dist-zip.zip
